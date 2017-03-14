@@ -10,7 +10,7 @@ Pod::Spec.new do |s|
   s.source       = { :git => "https://github.com/TRZXDev/TRZXShare.git", :tag => "#{s.version}" }
   
   s.requires_arc = true
-  s.source_files = 'TRZXShare/TRZXShare/.{h,m}'
+  s.source_files = 'TRZXShare/TRZXShare/*.{h,m}'
   s.public_header_files = 'TRZXShare/TRZXShare/TRZXShareHeader.h'
 
   s.dependency "TRZXShareView"
