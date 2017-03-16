@@ -7,7 +7,8 @@
 //
 
 #import "AppDelegate.h"
-#import "TRZXShareHeader.h"
+#import "OpenShareHeader.h"
+
 //#warning 请替换为自己的相关帐号进行测试
 ///微信第三方登录
 static NSString *const kWeiXinAppId         = @"wx7c0617cf79cada0e";

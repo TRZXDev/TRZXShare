@@ -14,7 +14,6 @@
 		7180C1161E77A6220051356D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7180C1151E77A6220051356D /* Assets.xcassets */; };
 		7180C1191E77A6220051356D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7180C1171E77A6220051356D /* LaunchScreen.storyboard */; };
 		7180C1371E77C1AB0051356D /* TRZXShareManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 7180C1361E77C1AB0051356D /* TRZXShareManager.m */; };
-		7180C13A1E77C9B20051356D /* TRZXOSMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = 7180C1391E77C9B20051356D /* TRZXOSMessage.m */; };
 		7180C14B1E77D9600051356D /* OpenShare+Alipay.m in Sources */ = {isa = PBXBuildFile; fileRef = 7180C13F1E77D9600051356D /* OpenShare+Alipay.m */; };
 		7180C14C1E77D9600051356D /* OpenShare+QQ.m in Sources */ = {isa = PBXBuildFile; fileRef = 7180C1411E77D9600051356D /* OpenShare+QQ.m */; };
 		7180C14D1E77D9600051356D /* OpenShare+Renren.m in Sources */ = {isa = PBXBuildFile; fileRef = 7180C1431E77D9600051356D /* OpenShare+Renren.m */; };
@@ -38,11 +37,8 @@
 		7180C1151E77A6220051356D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7180C1181E77A6220051356D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7180C11A1E77A6220051356D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		7180C1341E77C0C40051356D /* TRZXShareHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TRZXShareHeader.h; sourceTree = "<group>"; };
 		7180C1351E77C1AB0051356D /* TRZXShareManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TRZXShareManager.h; sourceTree = "<group>"; };
 		7180C1361E77C1AB0051356D /* TRZXShareManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TRZXShareManager.m; sourceTree = "<group>"; };
-		7180C1381E77C9B20051356D /* TRZXOSMessage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TRZXOSMessage.h; sourceTree = "<group>"; };
-		7180C1391E77C9B20051356D /* TRZXOSMessage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TRZXOSMessage.m; sourceTree = "<group>"; };
 		7180C13E1E77D9600051356D /* OpenShare+Alipay.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "OpenShare+Alipay.h"; sourceTree = "<group>"; };
 		7180C13F1E77D9600051356D /* OpenShare+Alipay.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "OpenShare+Alipay.m"; sourceTree = "<group>"; };
 		7180C1401E77D9600051356D /* OpenShare+QQ.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "OpenShare+QQ.h"; sourceTree = "<group>"; };
@@ -120,11 +116,8 @@
 			isa = PBXGroup;
 			children = (
 				7180C13D1E77D9600051356D /* Openshare */,
-				7180C1341E77C0C40051356D /* TRZXShareHeader.h */,
 				7180C1351E77C1AB0051356D /* TRZXShareManager.h */,
 				7180C1361E77C1AB0051356D /* TRZXShareManager.m */,
-				7180C1381E77C9B20051356D /* TRZXOSMessage.h */,
-				7180C1391E77C9B20051356D /* TRZXOSMessage.m */,
 			);
 			path = TRZXShare;
 			sourceTree = "<group>";
@@ -291,7 +284,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				7180C1111E77A6220051356D /* ViewController.m in Sources */,
-				7180C13A1E77C9B20051356D /* TRZXOSMessage.m in Sources */,
 				7180C10E1E77A6220051356D /* AppDelegate.m in Sources */,
 				7180C14C1E77D9600051356D /* OpenShare+QQ.m in Sources */,
 				7180C14E1E77D9600051356D /* OpenShare+Weibo.m in Sources */,

@@ -7,18 +7,25 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "TRZXShareHeader.h"
+#import "OpenShareHeader.h"
+
+/**
+ 第三方分享类型
+ */
+typedef enum : NSUInteger {
+    TRZXShareTypeToFriend, // 投融好友
+    TRZXShareTypeToTRZX, // 投融圈
+    TRZXShareTypeToWeixin, // 微信好友
+    TRZXShareTypeToWeixinTimeline, // 微信时间线
+    TRZXShareTypeToQQFriends, // QQ好友
+    TRZXShareTypeToQQZone // QQ空间
+} TRZXShareType;
+
 @interface TRZXShareManager : NSObject
 + (instancetype)sharedManager;
 
-@property (nonatomic, copy) void (^didSelectToTRZXFriendAction)(OSMessage* message); // 投融好友
-@property (nonatomic, copy) void (^didSelectToTRZXAction)(OSMessage* message); // 投融圈
-@property (nonatomic, copy) void (^didSelectToWeixinAction)(OSMessage* message); // 微信好友
-@property (nonatomic, copy) void (^didSelectToWeixinTimelineAction)(OSMessage* message); // 微信时间线
-@property (nonatomic, copy) void (^didSelectToQQFriendsAction)(OSMessage* message); // QQ好友
-@property (nonatomic, copy) void (^didSelectToQQZoneAction)(OSMessage* message); // QQ空间
 
--(void)showTRZXShareViewMessage:(TRZXOSMessage*)message;
+-(void)showTRZXShareViewMessage:(OSMessage*)message handler:(void (^)(TRZXShareType type))handler;
 - (void)hideTRZXShareViewMessage;
 
 #pragma 邀请好友

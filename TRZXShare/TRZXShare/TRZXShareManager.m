@@ -28,13 +28,13 @@
     return shared_manager;
 }
 
--(void)showTRZXShareViewMessage:(TRZXOSMessage*)message{
+-(void)showTRZXShareViewMessage:(OSMessage*)message handler:(void (^)(TRZXShareType type))handler{
+
     TRZXShareItem *item_SX = [TRZXShareItem itemWithTitle:@"发送给好友"
                                                      icon:@"Action_Friends"
                                                   handler:^{
-                                                      NSLog(@"点击了发送给投融好友");
-                                                      if (self.didSelectToTRZXFriendAction) {
-                                                          self.didSelectToTRZXFriendAction(message);
+                                                      if (handler) {
+                                                          handler(TRZXShareTypeToFriend);
                                                       }
                                                   }];
 
@@ -42,11 +42,9 @@
     TRZXShareItem *item_TRQ = [TRZXShareItem itemWithTitle:@"分享到投融圈"
                                                       icon:@"Action_Melting"
                                                    handler:^{
-                                                       NSLog(@"点击了分享到投融圈");
-                                                       if (self.didSelectToTRZXAction) {
-                                                           self.didSelectToTRZXAction(message);
+                                                       if (handler) {
+                                                           handler(TRZXShareTypeToTRZX);
                                                        }
-
                                                    }];
 
 
@@ -56,10 +54,8 @@
                                                    icon:@"Action_Share"
                                                 handler:^{
 
-                                                    NSLog(@"点击了发送给朋友");
-
-                                                    if (self.didSelectToWeixinAction) {
-                                                        self.didSelectToWeixinAction(message);
+                                                    if (handler) {
+                                                        handler(TRZXShareTypeToWeixin);
                                                     }
 
                                                     if (![message.link containsString:@"rongcloud"]) {
@@ -80,9 +76,11 @@
 
                                                     NSLog(@"点击了分享到朋友圈");
 
-                                                    if (self.didSelectToWeixinTimelineAction) {
-                                                        self.didSelectToWeixinTimelineAction(message);
+                                                    if (handler) {
+                                                        handler(TRZXShareTypeToWeixinTimeline);
                                                     }
+
+
 
                                                     if (![message.link containsString:@"rongcloud"]) {
                                                         message.link = [message.link stringByAppendingString:@"&fromType=wechatTimeline"];
@@ -108,8 +106,8 @@
                                                 handler:^{
                                                     NSLog(@"点击了QQ");
 
-                                                    if (self.didSelectToQQFriendsAction) {
-                                                        self.didSelectToQQFriendsAction(message);
+                                                    if (handler) {
+                                                        handler(TRZXShareTypeToQQFriends);
                                                     }
 
                                                     if (![message.link containsString:@"rongcloud"]) {
@@ -132,8 +130,8 @@
 
                                                     NSLog(@"点击了QQ空间");
 
-                                                    if (self.didSelectToQQZoneAction) {
-                                                        self.didSelectToQQZoneAction(message);
+                                                    if (handler) {
+                                                        handler(TRZXShareTypeToQQZone);
                                                     }
 
                                                     if (![message.link containsString:@"rongcloud"]) {
@@ -289,6 +287,10 @@
     
 }
 
+- (void)itemAction:(NSString *)title
+{
+    NSLog(@"%@", title);
+}
 
 
 @end

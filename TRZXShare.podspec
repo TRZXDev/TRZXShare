@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
   s.name         = 'TRZXShare'
   s.summary      = 'Asynchronous image loading framework.'
-  s.version      = '0.0.2'
+  s.version      = '0.0.3'
   s.license      = { :type => 'MIT', :file => 'FILE_LICENSE' }
   s.authors      = { 'fpli' => '952241861@qq.com' }
   s.homepage     = 'https://github.com/TRZXDev/TRZXShare'
@@ -11,7 +11,6 @@ Pod::Spec.new do |s|
   
   s.requires_arc = true
   s.source_files = 'TRZXShare/TRZXShare/*.{h,m}'
-  s.public_header_files = 'TRZXShare/TRZXShare/TRZXShareHeader.h'
 
   s.dependency "TRZXShareView"
 

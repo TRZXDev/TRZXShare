@@ -7,7 +7,7 @@
 //
 
 #import "ViewController.h"
-#import "TRZXShareHeader.h"
+#import "TRZXShareManager.h"
 @interface ViewController ()
 - (IBAction)weixinAction:(id)sender;
 - (IBAction)shareAction:(id)sender;
@@ -55,15 +55,21 @@
     NSString * link= @"https://www.baidu.com/";
 
 
-    TRZXOSMessage *msg=[[TRZXOSMessage alloc]init];
+    OSMessage *msg=[[OSMessage alloc]init];
     msg.title= title;
     msg.desc= desc;
     msg.link= link;
     msg.image= [UIImage imageNamed:@"icon"];//缩略图
 
 
-    [[TRZXShareManager sharedManager]showTRZXShareViewMessage:msg];
-    
+    [[TRZXShareManager sharedManager]showTRZXShareViewMessage:msg handler:^(TRZXShareType type) {
+
+        NSLog(@">>>>>>>>投融好友");
+
+
+    }];
+
+
 
 
 
