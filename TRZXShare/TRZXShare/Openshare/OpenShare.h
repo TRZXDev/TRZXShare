@@ -28,6 +28,8 @@ typedef enum : NSUInteger {
 @property NSString* link;
 @property UIImage *image;
 @property UIImage *thumbnail;
+// 头像图片地址
+@property NSString *headURL;
 @property OSMultimediaType multimediaType;
 //for 微信
 @property NSString* extInfo;
