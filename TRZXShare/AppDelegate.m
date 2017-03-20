@@ -11,9 +11,9 @@
 
 //#warning 请替换为自己的相关帐号进行测试
 ///微信第三方登录
-static NSString *const kWeiXinAppId         = @"wx7c0617cf79cada0e";
-static NSString *const kWeiXinAppSecret     = @"7d93f41caf579fb443000121f0480ebb";
-static NSString *const kQQAppID     = @"1105085153";
+static NSString *const kWeiXinAppId         = @"";
+static NSString *const kWeiXinAppSecret     = @"";
+static NSString *const kQQAppID     = @"";
 
 
 
